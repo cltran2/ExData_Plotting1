@@ -37,10 +37,10 @@ plot4 <- function () {
 
 plotall <- function () {
 	library(dplyr)
-	#data <- read.csv('household_power_consumption.txt', sep=';')
+	data <- read.csv('household_power_consumption.txt', sep=';')
 	mindate <- strptime('1/2/2007', '%d/%m/%Y')
 	maxdate <- strptime('2/2/2007', '%d/%m/%Y')
-	#data <- filter(data, strptime(Date, '%d/%m/%Y') >= mindate & strptime(Date, '%d/%m/%Y') <= maxdate)
+	data <- filter(data, strptime(Date, '%d/%m/%Y') >= mindate & strptime(Date, '%d/%m/%Y') <= maxdate)
 	
 	png('plot1.png', width = 480, height = 480)
 	plot1()
